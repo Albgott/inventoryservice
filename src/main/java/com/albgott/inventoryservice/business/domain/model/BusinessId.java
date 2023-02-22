@@ -1,13 +1,18 @@
 package com.albgott.inventoryservice.business.domain.model;
 
 import com.albgott.inventoryservice.business.domain.exception.WrongBusinessIDFormat;
+import jakarta.persistence.Embeddable;
 
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
+@Embeddable
 public class BusinessId implements Serializable {
-    private final UUID value;
+    private UUID value;
+
+    public BusinessId() {
+    }
 
     public BusinessId(String id) {
         try {

@@ -6,7 +6,12 @@ import org.apache.commons.lang.Validate;
 @Entity
 @Table(name = "businesses")
 public class Business {
+
     @Id
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "value",column = @Column(name = "id"))
+    })
     private BusinessId id;
     @Column(nullable = false,unique = true)
     private BusinessName name;
@@ -22,5 +27,13 @@ public class Business {
         Validate.notNull(name);
         this.id = id;
         this.name = name;
+    }
+
+    public BusinessId id() {
+        return id;
+    }
+
+    public BusinessName name() {
+        return name;
     }
 }
