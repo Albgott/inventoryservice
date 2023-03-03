@@ -17,6 +17,6 @@ public class CreateBusiness {
     }
 
     public void on(BusinessCreatedEvent event){
-        service.exec(new CreateBusinessCommand(event.aggregateId(), event.eventName()));
+        service.exec(new CreateBusinessCommand(event.aggregateId(), event.name()));
     }
 }

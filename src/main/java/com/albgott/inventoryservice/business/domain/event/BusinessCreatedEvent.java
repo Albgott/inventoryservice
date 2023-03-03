@@ -40,4 +40,8 @@ public class BusinessCreatedEvent extends DomainEvent {
                                       String occurredOn) {
         return new BusinessCreatedEvent(aggregateId,eventId,occurredOn,(String) body.get("name"));
     }
+
+    public String name() {
+        return name;
+    }
 }
