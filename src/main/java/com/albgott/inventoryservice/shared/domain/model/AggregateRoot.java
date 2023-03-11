@@ -1,9 +1,9 @@
 package com.albgott.inventoryservice.shared.domain.model;
 
 import com.albgott.inventoryservice.shared.domain.event.DomainEvent;
+import org.apache.commons.lang.StringUtils;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public abstract class AggregateRoot {
     private final List<DomainEvent> domainEvents = new ArrayList<>();
@@ -17,4 +17,5 @@ public abstract class AggregateRoot {
     final protected void record(DomainEvent event){
         domainEvents.add(event);
     }
+
 }

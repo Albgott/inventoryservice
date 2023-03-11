@@ -1,5 +1,13 @@
 package com.albgott.inventoryservice.shared.application;
 
-public interface QueryUseCase<Q extends Query, R extends Response> {
-    R exec(Q query);
+import jakarta.transaction.Transactional;
+
+public abstract class QueryUseCase<Q, R> {
+    @Transactional
+    public final R exec(Q query){
+        return doExec(query);
+    }
+
+    protected abstract R doExec(Q command);
+
 }

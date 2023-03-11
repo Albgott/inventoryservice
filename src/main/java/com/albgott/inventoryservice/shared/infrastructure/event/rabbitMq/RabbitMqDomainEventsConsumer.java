@@ -1,6 +1,6 @@
 package com.albgott.inventoryservice.shared.infrastructure.event.rabbitMq;
 
-import com.albgott.inventoryservice.shared.domain.Utils;
+import com.albgott.inventoryservice.shared.utils.Utils;
 import com.albgott.inventoryservice.shared.domain.event.DomainEvent;
 import com.albgott.inventoryservice.shared.infrastructure.event.DomainEventJsonUtils;
 import com.albgott.inventoryservice.shared.infrastructure.event.DomainEventSubscribersInformation;

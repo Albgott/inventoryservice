@@ -1,6 +1,6 @@
 package com.albgott.inventoryservice.shared.infrastructure.event;
 
-import com.albgott.inventoryservice.shared.domain.Utils;
+import com.albgott.inventoryservice.shared.utils.Utils;
 import com.albgott.inventoryservice.shared.domain.event.DomainEvent;
 import org.springframework.stereotype.Service;
 
